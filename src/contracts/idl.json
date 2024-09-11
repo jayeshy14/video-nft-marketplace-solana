@@ -1,5 +1,5 @@
 {
-  "address": "Dmzq5FqUfe3iUXLEEDAiUyWFyUcFafbSZqcNjm4otCR1",
+  "address": "8zd8SR11prvsNrSfsgyrn3qnUyQnSUMszqNnnbq1KErJ",
   "metadata": {
     "name": "solana_nft_anchor",
     "version": "0.1.0",
@@ -66,6 +66,10 @@
         {
           "name": "system_program",
           "address": "11111111111111111111111111111111"
+        },
+        {
+          "name": "rent",
+          "address": "SysvarRent111111111111111111111111111111111"
         }
       ],
       "args": []
@@ -86,11 +90,6 @@
         {
           "name": "state",
           "writable": true
-        },
-        {
-          "name": "signer",
-          "writable": true,
-          "signer": true
         },
         {
           "name": "mint",
@@ -202,6 +201,11 @@
         {
           "name": "rent",
           "address": "SysvarRent111111111111111111111111111111111"
+        },
+        {
+          "name": "signer",
+          "writable": true,
+          "signer": true
         }
       ],
       "args": [
@@ -228,10 +232,6 @@
         40
       ],
       "accounts": [
-        {
-          "name": "state",
-          "writable": true
-        },
         {
           "name": "payer",
           "writable": true,
@@ -286,39 +286,6 @@
           {
             "name": "counter",
             "type": "u32"
-          },
-          {
-            "name": "metadata_uri",
-            "type": {
-              "vec": "bytes"
-            }
-          },
-          {
-            "name": "owners",
-            "type": {
-              "vec": {
-                "array": [
-                  "u8",
-                  32
-                ]
-              }
-            }
-          },
-          {
-            "name": "nft_states",
-            "type": "bytes"
-          },
-          {
-            "name": "nft_prices",
-            "type": {
-              "vec": "u64"
-            }
-          },
-          {
-            "name": "nft_mints",
-            "type": {
-              "vec": "pubkey"
-            }
           }
         ]
       }
